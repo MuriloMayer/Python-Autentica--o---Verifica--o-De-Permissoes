@@ -1,0 +1,4 @@
+lucas@gmail.com;main.c;1;1;1
+matheus@gmail.com;main.c;1;1;1
+murilo;main.c;1;0;0
+murilo;carros.json;0;0;1
