@@ -9,7 +9,8 @@ while True:
             email, senha = user.strip().split(';')
             if email == emailInpt and senha == passwordInpt:
                 return True
-        return False
+            else :
+              return False
 
     def read_filetxt():
         with open('perm.txt', 'r', encoding='utf-8') as file:
@@ -33,11 +34,11 @@ while True:
         print("--------------------")
 
         if verify_password(inputEmail, inputPassword):
+
             print("Login Realizado Com Sucesso!")
             print("--------------------\n")
             print("Bem Vindo! " + inputEmail + "\nComandos Disponíveis: \n 1. Verificar Arquivos \n 2. Ler Arquivo \n 3. Alterar Arquivo \n 4. Executar Arquivo \n 5. Sair")
             input_commands = input("Digite uma opção:")
-
             if input_commands == "1":
                 files = read_filetxt()
 
@@ -59,6 +60,8 @@ while True:
                             else:
                                 print("Permissão Negada!")
                                 break
+                    else:
+                        print("Arquivo não encontrado")
             elif input_commands == "3":
                 input_file = input("Digite o nome do arquivo: ")
 
@@ -87,23 +90,23 @@ while True:
                                 print("Permissão Concedida!")
                             else:
                                 print("Permissão Negada!")
-                                
-                                
+
+
             elif input_commands == "5":
                 print("Saindo...")
-                exit()        
+                exit()
             else:
                 print("Opção Inválida")
                 break
-            
+
 
         else:
             print("Email ou Senha Incorretos")
-            break
+            continue
 
     elif inputPrincipal == "2":
         print("Criar Conta (not working)")
-        
+
     elif inputPrincipal == "3":
         print("Saindo...")
         exit()
